@@ -4,12 +4,14 @@
 \alias{acfpacf}
 \title{\code{acfpacf} produces a plot of the acf and the pacf of a time series}
 \usage{
-acfpacf(x, lag)
+acfpacf(x, lag, HV = "H")
 }
 \arguments{
 \item{x}{the series, a vector or a time series}
 
 \item{lag}{scalar, maximal lag to be plotted}
+
+\item{HV}{character, controls division of graphic window: "H" horizontal, "V" vertical, default is "H"}
 }
 \description{
 \code{acfpacf} produces a plot of the acf and the pacf of a time series
@@ -17,5 +19,5 @@ acfpacf(x, lag)
 \examples{
 \donttest{
   data(LYNX)
-  acfpacf(log(LYNX),15) }
+  acfpacf(log(LYNX),15,HV="H") }
 }

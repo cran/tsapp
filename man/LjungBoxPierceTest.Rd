@@ -4,14 +4,14 @@
 \alias{LjungBoxPierceTest}
 \title{\code{LjungBoxPierceTest} determines the test statistic and p values for several lags  for a residual series}
 \usage{
-LjungBoxPierceTest(y, n.par = 0, maxlag = 24)
+LjungBoxPierceTest(y, n.par = 0, maxlag = 48)
 }
 \arguments{
 \item{y}{the series of residuals, a vector or a time series}
 
 \item{n.par}{number of parameters which had been estimated}
 
-\item{maxlag}{maximal lag up to which the test statistic is computed}
+\item{maxlag}{maximal lag up to which the test statistic is computed, default is maxlag = 48}
 }
 \value{
 BT     matrix with columns:  

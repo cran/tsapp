@@ -120,14 +120,15 @@ vartable<-function(y,season){
 #'  
 #' @param x   the series, a vector or a time series  
 #' @param lag scalar, maximal lag to be plotted  
+#' @param HV character, controls division of graphic window: "H" horizontal, "V" vertical, default is "H" 
 #'
 #' @examples 
 #' \donttest{
 #'   data(LYNX)
-#'   acfpacf(log(LYNX),15) }
+#'   acfpacf(log(LYNX),15,HV="H") }
 #' @export  
  
-acfpacf<-function(x,lag){
+acfpacf<-function(x,lag,HV = "H"){
  x <- as.vector(x)
  m <- mean(x,na.rm = TRUE)
  n <- length(na.omit(x))
@@ -139,16 +140,18 @@ acfpacf<-function(x,lag){
  bart <- cumsum(c(1,2*a1^2))  
  oldpar <- par(no.readonly = TRUE) 
  on.exit(par(oldpar)) 
- par(mfrow=c(2,1),mex=0.8)
- plot(c(0:lag),a$acf,type="h",lwd=2,ylim=c(min(c(-2.1*sqrt(bart/n),a1)),1),xlab="Lag",ylab="")
- title("ACF mit Bartlett-95%-Grenzen")
+ if(HV == "V"){  par(mfrow=c(1,2),mex=0.8) }
+ else{  par(mfrow=c(2,1),mex=0.8) }
+ 
+ plot(c(0:lag),a$acf,type="h",lwd=2,ylim=c(-1,1),xlab="Lag",ylab="")   # ylim=c(min(c(-2.1*sqrt(bart/n),a1)),1),xlab="Lag",ylab="")
+ title("ACF with Bartlett-95%-bounds")
  lines(c(0,lag),rep(0,2))
  lines(c(1:lag),2*sqrt(bart[-length(bart)]/n))
  lines(c(1:lag),-2*sqrt(bart[-length(bart)]/n))
  p <- pacf(y,lag,plot=FALSE) 
  p <- p$acf
- plot(c(0:lag),c(0,p),type="h",lwd=2,ylim=c(min(c(p,-2.1*sqrt(1/n))),max(p,2.1*sqrt(1/n))),xlab="Lag",ylab="")
- title("PACF mit 95%-Grenzen")
+ plot(c(0:lag),c(0,p),type="h",lwd=2,ylim=c(-1,1) ,xlab="Lag",ylab="") #   ylim=c(min(c(p,-2.1*sqrt(1/n))),max(p,2.1*sqrt(1/n))),xlab="Lag",ylab="")
+ title("PACF with 95%-bounds")
  lines(c(0,lag),rep(0,2)) 
  lines(c(1,lag),rep(2*sqrt(1/n),2))
  lines(c(1,lag),rep(-2*sqrt(1/n),2)) 
@@ -160,7 +163,7 @@ acfpacf<-function(x,lag){
 #'  
 #' @param  y      the series of residuals, a vector or a time series  
 #' @param  n.par  number of parameters which had been estimated 
-#' @param  maxlag maximal lag up to which the test statistic is computed
+#' @param  maxlag maximal lag up to which the test statistic is computed, default is maxlag = 48
 #' @return BT     matrix with columns:  
 #'                  lags,   degrees of freedom,    test statistic,   p-value  
 #' @examples 
@@ -170,7 +173,7 @@ acfpacf<-function(x,lag){
 #'
 #' @export  
 
-LjungBoxPierceTest <- function(y,n.par=0,maxlag=24){
+LjungBoxPierceTest <- function(y,n.par=0,maxlag=48){
 la <- seq(6,maxlag,6) 
 BT<-matrix(NA,length(la),4) 
 for (i in c(1:length(la))){

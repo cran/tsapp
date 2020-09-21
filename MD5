@@ -1,13 +1,13 @@
-5e126d35b40a17496e56a693ee51f01b *DESCRIPTION
+7ae21e465d164c159f0adb47c84d5a9b *DESCRIPTION
 2a70ebfe26746dd8c3562627e058cf65 *NAMESPACE
 b8cea7c212018caafedfef4008bef8f3 *R/auxilary.r
 258ce07d355ad76d84f40eb78bec1e59 *R/decomp.r
-604a4667838d79f3b8d37888fd41fbd5 *R/frequdom.r
+8f1401fd5deebbe20501fb97a26bb7fa *R/frequdom.r
 0175a2e3906fee2e25e495c6b28f815e *R/hac.r
 bc8f3506797825f059c3d367c692ef4a *R/multivarts.r
-fa31e0a66592c6d2f09aa1d7debd5923 *R/series.r
-43f8e7eb5dee20136e56f4b3ebc5ad97 *R/smaniplot.r
-96a51830b30f8b98c61fb97a2376bed0 *R/specialfun.r
+cf73c6d831415f368c43eab103521548 *R/series.r
+cdbd6502bba90604d83a4a5e2c9f4b9a *R/smaniplot.r
+6a677d000a2f2b51be98f2239f9f8195 *R/specialfun.r
 c8408c7eb95400e61b93a7b90bce7cf4 *data/ACCIDENT.RData
 c204cd4e54ccb5c1394ff4adf89c542b *data/ALCINCOME.RData
 5049b67769764169fb757e140801ecbe *data/BEER.RData
@@ -21,7 +21,7 @@ c470b2af9d55aa8b774157f858c688e4 *data/ENGINES.RData
 4550da56ae46c5de15bf3c984bc01648 *data/GDP.RData
 c7bbe07cc1ff2ec56523c2544178d3bc *data/GDPORIG.RData
 22357e603b82d7940b24755fba3a22a2 *data/HEARTBEAT.RData
-9846b28fd7e8ad072985613911bb11c6 *data/HSV.RData
+4135340dca15bfdc792a2b2690d0138c *data/HSV.RData
 a2d7790b79ec7469d219257b627afc57 *data/IBM.RData
 749f8f3a6c9ee170827b3045d4080c7d *data/ICECREAM.RData
 352824f60fcd391e5015698b7934fa1b *data/INORDER.RData
@@ -65,7 +65,7 @@ fbf360b7db29cc9c63fd38098c498e8f *man/BoxCox.Rd
 b027e547476652c1e9a321933f39158c *man/Grangercaus.Rd
 5ec4235d0f6fc7f3e633fe3851d1076e *man/HAC.Rd
 dee90d1eca9d62bcd0fdcbe9e0414f08 *man/HEARTBEAT.Rd
-073595a38cc868bbdbe507fa962db6a9 *man/HSV.Rd
+cfa45846f34f017a52552cdea62e006b *man/HSV.Rd
 68f2617ea47f0884f3a00c8d62893ab2 *man/IBM.Rd
 22974f11df784a81f7e84a703f0470ee *man/ICECREAM.Rd
 d7a497d33768b4c7ebb0d0fe4063717f *man/INORDER.Rd
@@ -74,7 +74,7 @@ c2c8e93b68a4c6580b5fbf7a829b5d0d *man/LITH.Rd
 f3ed874c470fd7665668a561f31d7826 *man/LUHORMONE.Rd
 28c9f9cb8dba5cece30d5663a01109bc *man/LYNX.Rd
 77bbedd74cb377489b45bb3065254f0f *man/LYNXHARE.Rd
-3f261fc7c8708c1a0aa81c045a110e39 *man/LjungBoxPierceTest.Rd
+cb1e2b65aa6b3f575319064658ae6134 *man/LjungBoxPierceTest.Rd
 d82befa820dd8acb899265def6f0104f *man/MAUNALOA.Rd
 0421be1df49f07d1b02639b078fafca7 *man/MDAX.Rd
 1abdddbaaf2145d301bfccf0c951b374 *man/MELANOM.Rd
@@ -96,7 +96,7 @@ ee5bd84153de041b604591627dd4b87b *man/TREMOR.Rd
 1fde2986788ce528961141537af8521b *man/USAPOP.Rd
 1a9265f89d12af6d2325998520c3229d *man/WHORMONE.Rd
 39fb8d91220b00f4b9513ddd7f1fea08 *man/acfmat.Rd
-9cf99149068f13c5a7a75682ad72e98d *man/acfpacf.Rd
+d9b1c0d17d0e609f8365f6b16b57586b *man/acfpacf.Rd
 7ea006cc67e45c228df92cf15550009a *man/armathspec.Rd
 f16d358882b07a05e9a5104cb6b70481 *man/aspectratio.Rd
 80896fd134fbd283f8f664049af68aa2 *man/bandfilt.Rd
@@ -108,8 +108,8 @@ f4ae531415b69829025132b5b1f16881 *man/lagwinba.Rd
 3a3a891a0693a4695c5005be55e86e2a *man/lagwinpa.Rd
 dc3b155d36770e9ecdfd44deb8b9f8d6 *man/lagwintu.Rd
 d2000efe9f6f6e61229a792ed0a501dc *man/ldrec.Rd
-b1afdaa120261ae76e674b2795d71bbc *man/missar.Rd
-675aa79cd74295cb1a1768c02d2ac1f5 *man/missls.Rd
+44001093ad01857bdcaab362cba4573b *man/missar.Rd
+1b1547427e233ed0de571b749f303121 *man/missls.Rd
 6c40c294e6487bb352a64a2d8e3675c1 *man/moveav.Rd
 05a3ea7a3a857cafaf164d0512f7dc46 *man/movemed.Rd
 8d810d858f6365a8fa26db161e7ba960 *man/outidentify.Rd
@@ -126,7 +126,7 @@ dddf199d095ed4a3e4d11fbc391eca5a *man/robsplinedecomp.Rd
 f50893776d6dd6657b89b4cd920902cb *man/simpledecomp.Rd
 fc5e19ba407d633dae79a593f784e506 *man/smoothls.Rd
 2c9f9d8180b89604df2fdc1e5167bbea *man/smoothrb.Rd
-67ecf04f8c1a5c208b2c7a7ec0a8390f *man/specest.Rd
+eec15152ef13fe0edbe026f2577e4c63 *man/specest.Rd
 eb8320a1d38d4c964880679bbcba96b2 *man/specplot.Rd
 1a48eb3eb51ed4165d8694205fa12f32 *man/splinedecomp.Rd
 0235a8eb663353bbb4148c5bd3e009e4 *man/statcheck.Rd

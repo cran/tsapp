@@ -4,14 +4,16 @@
 \alias{missar}
 \title{\code{missar} Substitution of missing values in a time series by 
    conditional  exspectations of AR(p) models}
+\source{
+Miller R.B., Ferreiro O. (1984) <doi.org/10.1007/978-1-4684-9403-7_12> "A Strategy to Complete a Time Series with Missing Observations"
+}
 \usage{
 missar(x, p, iterout = 0)
 }
 \arguments{
 \item{x}{vector, the time series}
 
-\item{p}{integer, the maximal order of ar polynom   0 <= p < 18, 
-if p=0  linear interpolation without iteration}
+\item{p}{integer, the maximal order of ar polynom   0 < p < 18,}
 
 \item{iterout}{if = 1, iteration history is printed}
 }

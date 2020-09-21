@@ -128,7 +128,7 @@ return(w)
 #'  
 #' @param  y   (n,1) vector, the ts
 #' @param  nf  number of equally spaced frequencies
-#' @param  e   equal bandwidth
+#' @param  e   equal bandwidth, must be 0 <= e <0.5
 #' @param  win string, name of periodogram window
 #'                             (possible: "perwinba", "perwinpa")
 #' @param conf  scalar, the level for confidence intervals
@@ -189,14 +189,14 @@ specplot <- function(s,Log=FALSE){
       o <- s[,4]
       }
    if(Log==FALSE){ 
-   plot(f,sp,type="l",ylim=c(0,max(sp,u,o)),xlab="Frequenz",ylab="Spektrum")
+   plot(f,sp,type="l",ylim=c(0,max(sp,u,o)),xlab="Frequency",ylab="Spectrum")
    if(ncol(s)==4){
       lines(f,u,lty=2)
       lines(f,o,lty=2)
       } 
    } 
    if(Log==TRUE){ 
-   plot(f,log(sp),type="l",ylim=c(0,max(log(sp),log(u),log(o))),xlab="Frequenz",ylab="Logspektrum")
+   plot(f,log(sp),type="l",ylim=c(0,max(log(sp),log(u),log(o))),xlab="Frequency",ylab="Logspectrum")
    if(ncol(s)==4){
       lines(f,log(u),lty=2)
       lines(f,log(o),lty=2)

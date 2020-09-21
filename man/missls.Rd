@@ -2,14 +2,18 @@
 % Please edit documentation in R/specialfun.r
 \name{missls}
 \alias{missls}
-\title{\code{missls} substitutes missing values in a time series using LS approach}
+\title{\code{missls} substitutes missing values in a time series using the LS approach with ARMA models}
+\source{
+S. R. Brubacher and G. Tunnicliffe Wilson (1976)   <https://www.jstor.org/stable/2346678>  "Interpolating Time Series with Application to the 
+   Estimation of Holiday Effects on Electricity Demand Journal of the Royal Statistical Society"
+}
 \usage{
 missls(x, p = 0, tol = 0.001, theo = 0)
 }
 \arguments{
 \item{x}{vector, the time series}
 
-\item{p}{integer, the  order of polynom}
+\item{p}{integer, the  order of polynom   alpha(B)/beta(B)}
 
 \item{tol}{tolerance that can be set; it enters via tol*sd(x,na.rm=TRUE)}
 
@@ -19,7 +23,7 @@ missls(x, p = 0, tol = 0.001, theo = 0)
 y    completed time series
 }
 \description{
-\code{missls} substitutes missing values in a time series using LS approach
+\code{missls} substitutes missing values in a time series using the LS approach with ARMA models
 }
 \examples{
 data(HEARTBEAT)

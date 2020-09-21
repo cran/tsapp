@@ -12,7 +12,7 @@ specest(y, nf, e, win = c("perwinba", "perwinpa"), conf = 0, type = "cov")
 
 \item{nf}{number of equally spaced frequencies}
 
-\item{e}{equal bandwidth}
+\item{e}{equal bandwidth, must be 0 <= e <0.5}
 
 \item{win}{string, name of periodogram window
 (possible: "perwinba", "perwinpa")}

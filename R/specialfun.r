@@ -127,13 +127,13 @@ outidentify <- function(x,object,alpha=0.05, robust = FALSE){
 #'    conditional  exspectations of AR(p) models
 #'  
 #' @param x vector, the time series 
-#' @param p integer, the maximal order of ar polynom   0 <= p < 18, 
-#'            if p=0  linear interpolation without iteration 
+#' @param p integer, the maximal order of ar polynom   0 < p < 18,  
 #' @param   iterout  if = 1, iteration history is printed
 #' @return  out list with   elements
 #' \item{a}{(p,p)-matrix, estimated ar coefficients for ar-models   }
 #' \item{y}{(n,1)-vector, completed time series }
 #' \item{iterhist}{matrix, NULL or the iteration history}
+#' @source Miller R.B., Ferreiro O. (1984) <doi.org/10.1007/978-1-4684-9403-7_12> "A Strategy to Complete a Time Series with Missing Observations" 
 #' @examples 
 #' data(HEARTBEAT)
 #' x <- HEARTBEAT
@@ -150,6 +150,7 @@ missar <- function(x,p,iterout=0){
  voll <- x  
  if(length(x[!is.na(x)]) == n){ stop("no missing observation")  } 
  if(is.na(x[1])|is.na(x[n])){ stop("First and last observation must not be missing")  }   
+ if( (p <=  0)|(p >= 18) ){ stop("order p of ar process must be 0<p<18")  } 
 
 # ... indexf : indexes of missing values
  indexf <- c(1:n)
@@ -163,11 +164,11 @@ missar <- function(x,p,iterout=0){
 
 # ... start values:  yule-walker-estimates for a(1),...,a(p)  
 
-if( p > 0 ){
+
    a <- acf(xcent,p,plot=FALSE) 
    a <- ldrec(a$acf) 
-   a <- a[,1:p]  
-  }
+   a <- a[,1:p,drop=FALSE]  
+ 
  
 # ... indexes of the beginnings and endings of the gaps
 
@@ -320,13 +321,15 @@ pestep <- function(f,xt){
    return(xt) 
 } 
 
-#' \code{missls} substitutes missing values in a time series using LS approach 
+#' \code{missls} substitutes missing values in a time series using the LS approach with ARMA models  
 #'  
 #' @param  x     vector, the time series 
-#' @param  p     integer, the  order of polynom     
+#' @param  p     integer, the  order of polynom   alpha(B)/beta(B)    
 #' @param tol    tolerance that can be set; it enters via tol*sd(x,na.rm=TRUE)
 #' @param theo   (k,1)-vector, prespecified Inverse ACF, IACF (starting at lag 1) 
 #' @return  y    completed time series
+#' @source  S. R. Brubacher and G. Tunnicliffe Wilson (1976)   <https://www.jstor.org/stable/2346678>  "Interpolating Time Series with Application to the 
+#'    Estimation of Holiday Effects on Electricity Demand Journal of the Royal Statistical Society"
 #' @examples 
 #' data(HEARTBEAT)
 #' x <- HEARTBEAT

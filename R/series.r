@@ -177,7 +177,7 @@
                                                                                                        
 #' HSV's position in the first German soccer league       
 #'      
-#' @format HSV is a univariate time series of length 34:
+#' @format HSV is a univariate time series of length 47:
 #' \describe{
 #' \item{HSV}{HSV's position in the first German soccer league}
 #' }  
