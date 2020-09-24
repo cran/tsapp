@@ -178,7 +178,7 @@ else if( (indexf[m]-indexf[1]) == (m-1) )   # ... one sequence of missings of le
    { luecke <- matrix(c(indexf[1],indexf[m]),1,2) } 
 else                                       # ... else
    { TT <- as.matrix(cbind(indexf[2:m],indexf[1:(m-1)]))
-     TT <- TT[(indexf[2:m]-indexf[1:m-1]) != 1,] 
+     TT <- TT[(indexf[2:m]-indexf[1:m-1]) != 1,,drop=FALSE] 
      luecke <- as.matrix(cbind(c(indexf[1],TT[,1]),c(TT[,2],indexf[m])))  
    } 
 lz <- nrow(luecke)  
@@ -240,7 +240,7 @@ lz <- nrow(luecke)
       aalt <- a  
       a <- acf(voll,p,plot=FALSE) 
       a <- a$acf 
-      a <- ldrec(a)[,1:p]   
+      a <- ldrec(a)[,1:p,drop=FALSE]   
       # .... check for interruption  
  
       if( max(abs(aalt-a)) <= tol ){ abbruch <- 1  }

@@ -1,4 +1,4 @@
-7ae21e465d164c159f0adb47c84d5a9b *DESCRIPTION
+fd49a18a7e43a0c82001712cd0e1a5f5 *DESCRIPTION
 2a70ebfe26746dd8c3562627e058cf65 *NAMESPACE
 b8cea7c212018caafedfef4008bef8f3 *R/auxilary.r
 258ce07d355ad76d84f40eb78bec1e59 *R/decomp.r
@@ -7,7 +7,7 @@ b8cea7c212018caafedfef4008bef8f3 *R/auxilary.r
 bc8f3506797825f059c3d367c692ef4a *R/multivarts.r
 cf73c6d831415f368c43eab103521548 *R/series.r
 cdbd6502bba90604d83a4a5e2c9f4b9a *R/smaniplot.r
-6a677d000a2f2b51be98f2239f9f8195 *R/specialfun.r
+07238034cd07eae5303b2637582cc5a5 *R/specialfun.r
 c8408c7eb95400e61b93a7b90bce7cf4 *data/ACCIDENT.RData
 c204cd4e54ccb5c1394ff4adf89c542b *data/ALCINCOME.RData
 5049b67769764169fb757e140801ecbe *data/BEER.RData
