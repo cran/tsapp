@@ -4,11 +4,13 @@
 \name{PAPER}
 \alias{PAPER}
 \title{Two measurements at a paper machine}
-\format{PAPER is a bivariate time series of length 160  
+\format{
+PAPER is a bivariate time series of length 160  
 \describe{ 
 \item{H}{High} 
 \item{W}{Weight}  
-}}
+}
+}
 \source{
 Janacek, G. J.  & Swift, L. (1993, ISBN: 978-0139184598) "Time Series: Forecasting, Simulation, Applications"
 }

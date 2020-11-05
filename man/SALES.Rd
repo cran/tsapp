@@ -4,10 +4,12 @@
 \name{SALES}
 \alias{SALES}
 \title{Monthly sales of a company}
-\format{SALES is a univariate time series of length 77:
+\format{
+SALES is a univariate time series of length 77:
 \describe{
 \item{y}{monthly  sales of a company}
-}}
+}
+}
 \source{
 Newton, H. J. (1988, ISBN: 978-0534091989): "TIMESLAB: A time series analysis laboraty"
 }

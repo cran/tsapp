@@ -4,10 +4,12 @@
 \name{LYNX}
 \alias{LYNX}
 \title{Annual lynx trappings in a region of North-West Canada. Taken from Andrews and Herzberg (1985).}
-\format{LYNX is a univariate time series of length 114; start 1821 frequency = 1
+\format{
+LYNX is a univariate time series of length 114; start 1821 frequency = 1
 \describe{
 \item{LYNX}{annual lynx trappings in a region of North-west Canada}
-}}
+}
+}
 \source{
 Andrews, D. F. and Herzberg, A. M.  (1985) "Data" <https://www.springer.com/gp/book/9781461295631>
 }

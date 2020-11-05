@@ -83,7 +83,7 @@ statcheck<-function(y,d){
 
 #' \code{vartable} determines table of variate differences 
 #'  
-#' @param  y      the series, a vector or a time series  
+#' @param  y      the series, a vector or a time series  ( no NA's )
 #' @param  season scalar, period of seasonal component  
 #' @return d      matrix with ratios of variances for differend numbers of simple and seasonal differencing 
 #'
@@ -93,25 +93,25 @@ statcheck<-function(y,d){
 #'
 #' @export  
 
-vartable<-function(y,season){ 
- y1<-y
- ta<-matrix(0,4,4)
+vartable <- function(y,season){ 
+ y1 <- y
+ ta <- matrix(0,4,4)
  
- ta[1,1]<-var(y1)  
- for (j in 2:4){ ta[1,j]<-var(diff(y1,lag=season,differences = j-1)) }
+ ta[1,1] <- var(y1)  
+ for (j in 2:4){ ta[1,j] <- var(diff(y1,lag=season,differences = j-1)) }
  for (i in 2:4)
    {
-    y1<-diff(y,lag=1,differences = i-1)
-    ta[i,1]<-var(y1)
-    for (j in 2:4){ ta[i,j]<-var(diff(y1,lag=season,differences = j-1)) }
+    y1 <- diff(y,lag=1,differences = i-1)
+    ta[i,1] <- var(y1)
+    for (j in 2:4){ ta[i,j] <- var(diff(y1,lag=season,differences = j-1)) }
    }    
   ta<-ta/var(y) 
-  Saisdiff0<-ta[,1] 
-  Saisdiff1<-ta[,2] 
-  Saisdiff2<-ta[,3] 
-  Saisdiff3<-ta[,4]
-  Einfachdiff<-c(0:3) 
- d<-cbind(Einfachdiff,Saisdiff0,Saisdiff1,Saisdiff2,Saisdiff3)
+  Seasdiff0 <- ta[,1] 
+  Seasdiff1 <- ta[,2] 
+  Seasdiff2 <- ta[,3] 
+  Seasdiff3 <- ta[,4] 	 
+  Simplediff <- c(0:3) 
+ d <- cbind(Simplediff,Seasdiff0,Seasdiff1,Seasdiff2,Seasdiff3)
  return(d)
 }  
  

@@ -4,7 +4,8 @@
 #' \describe{
 #' \item{ACCIDENT}{Monthly  numbers of  road traffic accidents with personal injury}
 #' }  
-#' @source  < https://www-genesis.destatis.de/genesis//online?operation=table&code=46241-0002&levelindex=0&levelid=1583749114977>
+#' @source  < https://www-genesis.destatis.de/genesis//online?operation=table&code=46241-0002& \cr
+#'    levelindex=0&levelid=1583749114977>
 #' @examples 
 #' data(ACCIDENT)
 #' ## maybe  tsp(ACCIDENT) ; plot(ACCIDENT) 
@@ -86,8 +87,7 @@
 #' \describe{
 #' \item{DIABETES}{Incidences of insulin-dependent diabetes mellitus}
 #' }
-#' @source Waldhoer, T., Schober, E. and Tuomilehto, J. (1997) <https://www.sciencedirect.com/science/
-#'    article/abs/pii/S0895435696003344>
+#' @source Waldhoer, T., Schober, E. and Tuomilehto, J. (1997) <https://www.sciencedirect.com/science/ \cr article/abs/pii/S0895435696003344>
 #' @examples 
 #' data(DIABETES)
 #' ## maybe  tsp(DIABETES) ; plot(DIABETES) 
@@ -143,7 +143,7 @@
 #' \describe{
 #' \item{GDP}{Gross domestic product  adjusted for price changes}
 #' }
-#' @source  <https://www-genesis.destatis.de/genesis//online?operation=table&code=81000-0002&levelindex=0&levelid=1583750132341>
+#' @source  <https://www-genesis.destatis.de/genesis//online?operation=table&code=81000-0002&levelindex \cr =0&levelid=1583750132341>
 #' @examples 
 #' data(GDP)
 #' ## maybe  tsp(GDP) ; plot(GDP) 
@@ -156,7 +156,7 @@
 #' \describe{
 #' \item{GDPORIG}{gross domestic product, values of Laspeyres index to the base 2000}
 #' }
-#' @source <https://www-genesis.destatis.de/genesis//online?operation=table&code=81000-0002&levelindex=0&levelid=1583750132341>
+#' @source <https://www-genesis.destatis.de/genesis//online?operation=table&code=81000-0002&levelindex \cr =0&levelid=1583750132341>
 #' @examples 
 #' data(GDPORIG)
 #' ## maybe  tsp(GDPORIG) ; plot(GDPORIG) 
@@ -344,6 +344,21 @@
 #' ## maybe  tsp(MUSKRAT) ; plot(MUSKRAT) 
 "MUSKRAT" 
  
+ 
+#' Daily values of the Japanese stock market index Nikkei 225 between 02.02.2000 and 20.10.2020
+#'    
+#' @format NIKKEI is a univariate time series of length 5057
+#' \describe{
+#' \item{NIKKEI}{Daily values of Nikkei}
+#' } 
+#' @source Heber, G., Lunde, A., Shephard, N. and Sheppard, K. (2009) "Oxford-Man Institute's realized library, version 0.3", 
+#' Oxford-Man Institute, University of Oxford, Oxford    <https://realized.oxford-man.ox.ac.uk/data>  
+#' @examples 
+#' data(NIKKEI)
+#' ## maybe plot(NIKKEI) 
+"NIKKEI" 
+
+ 
                                           
 #' Amount of an Oxygen isotope      
 #'     
@@ -465,7 +480,7 @@
 #' \describe{
 #' \item{TAXES}{monthly community taxes in Germany}
 #' }   
-#' @source   <https://www-genesis.destatis.de/genesis/online?operation=previous&levelindex=1&step=1&titel=Tabellenaufbau&levelid=1583748637039>
+#' @source   <https://www-genesis.destatis.de/genesis/online?operation=previous&levelindex=1&step=1&titel= \cr Tabellenaufbau&levelid=1583748637039>
 #' @examples 
 #' data(TAXES)
 #' ## maybe  tsp(TAXES) ; plot(TAXES) 

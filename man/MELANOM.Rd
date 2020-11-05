@@ -4,12 +4,14 @@
 \name{MELANOM}
 \alias{MELANOM}
 \title{Melanoma incidence in Connecticut}
-\format{MELANOM is a  multivariate time series of length 45 and 3 variables
+\format{
+MELANOM is a  multivariate time series of length 45 and 3 variables
 \describe{ 
 \item{POP}{Population} 
 \item{RATE}{Incidence} 
 \item{SUN}{Sunspots} 
-}}
+}
+}
 \source{
 Andrews, D. F. and Herzberg, A. M.  (1985) "Data" <https://www.springer.com/gp/book/9781461295631>
 }

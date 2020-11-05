@@ -4,10 +4,12 @@
 \name{HEARTBEAT}
 \alias{HEARTBEAT}
 \title{Cardiac frequency of a patient}
-\format{HEARTBEAT is a univariate time series of length 30:
+\format{
+HEARTBEAT is a univariate time series of length 30:
 \describe{
 \item{HEARTBEAT}{cardiac frequency of a patient}
-}}
+}
+}
 \usage{
 HEARTBEAT
 }

@@ -4,10 +4,12 @@
 \name{PRODINDEX}
 \alias{PRODINDEX}
 \title{Production index of manufacturing industries}
-\format{PRODINDEX is a univariate time series of length 119:
+\format{
+PRODINDEX is a univariate time series of length 119:
 \describe{
   \item{PRODINDEX}{Production index of manufacturing industries}
-}}
+}
+}
 \source{
 Statistisches Bundesamt (2009)  <https://www-genesis.destatis.de/genesis/online>
 }

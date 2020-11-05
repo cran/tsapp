@@ -4,10 +4,12 @@
 \name{PIGPRICE}
 \alias{PIGPRICE}
 \title{Monthly prices for pigs}
-\format{PIGPRICE is a univariate time series of length 240; start January 1894, frequency =12
+\format{
+PIGPRICE is a univariate time series of length 240; start January 1894, frequency =12
 \describe{
 \item{PIGPRICE}{Monthly prices for pigs}
-}}
+}
+}
 \source{
 Hanau, A. (1928)  "Die Prognose der Schweinepreise"
 }

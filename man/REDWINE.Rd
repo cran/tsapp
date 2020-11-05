@@ -4,10 +4,12 @@
 \name{REDWINE}
 \alias{REDWINE}
 \title{Monthly sales of Australian red wine (1000 l)}
-\format{REDWINE is a univariate time series of length 187; start January 1980, frequency =12
+\format{
+REDWINE is a univariate time series of length 187; start January 1980, frequency =12
 \describe{
 \item{REDWINE}{Monthly sales of Australian red wine }
-}}
+}
+}
 \source{
 R package tsdl <https://github.com/FinYang/tsdl>
 }

@@ -4,12 +4,14 @@
 \name{L921}
 \alias{L921}
 \title{Subsoil water level and precipitation at pilot well L921}
-\format{L921 is a trivariate time series of length 335:
+\format{
+L921 is a trivariate time series of length 335:
 \describe{
 \item{T}{Day}
 \item{Y}{Water level}
 \item{Z}{Supplemented water level}
-}}
+}
+}
 \usage{
 L921
 }

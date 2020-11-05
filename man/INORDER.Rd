@@ -4,10 +4,12 @@
 \name{INORDER}
 \alias{INORDER}
 \title{Income orders of a company}
-\format{INORDER is a univariate time series of length 237, start January 1968, frequency =12 
+\format{
+INORDER is a univariate time series of length 237, start January 1968, frequency =12 
 \describe{
 \item{INORDER}{Income orders of a company}
-}}
+}
+}
 \usage{
 INORDER
 }

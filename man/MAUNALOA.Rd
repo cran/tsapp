@@ -4,10 +4,12 @@
 \name{MAUNALOA}
 \alias{MAUNALOA}
 \title{Atmospheric CO2 concentrations (ppmv) derived from in situ air samples collected at Mauna Loa Observatory, Hawaii}
-\format{MAUNALOA is a univariate time series of length 735; start March 1958, frequency = 12   
+\format{
+MAUNALOA is a univariate time series of length 735; start March 1958, frequency = 12   
 \describe{
 \item{MAUNALOA}{CO2-concentration at Mauna Loa}
-}}
+}
+}
 \source{
 Keeling, C. D. ,  Piper, S. C.,  Bacastow,  R. B., Wahlen, M. ,  Whorf, T. P., Heimann,  M.,  and Meijer, H. A.  (2001)  <https://library.ucsd.edu/dc/object/bb3859642r>
 }

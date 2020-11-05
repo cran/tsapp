@@ -4,10 +4,12 @@
 \name{USAPOP}
 \alias{USAPOP}
 \title{Population of USA}
-\format{USAPOP is a univariate time series  of length 39; start 1630, frequency = 0.1 
+\format{
+USAPOP is a univariate time series  of length 39; start 1630, frequency = 0.1 
 \describe{
 \item{USAPOP}{Population of USA}
-}}
+}
+}
 \source{
 <https://www.worldometers.info/world-population/us-population/>
 }

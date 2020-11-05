@@ -4,11 +4,13 @@
 \name{DOMINANCE}
 \alias{DOMINANCE}
 \title{Running yield of public bonds in Austria and Germany}
-\format{DOMINANCE is a bivariate time series of length 167:
+\format{
+DOMINANCE is a bivariate time series of length 167:
 \describe{
 \item{X}{Interest rate Germany}
 \item{Y}{Interest rate Austria}
-}}
+}
+}
 \source{
 Jaenicke, J. and Neck, R. (1996) <https://doi.org/10.17713/ajs.v25i2.555>
 }

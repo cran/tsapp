@@ -4,12 +4,14 @@
 \name{TREERING}
 \alias{TREERING}
 \title{Mean thickness of annual tree rings}
-\format{TREERING is a multivariate time series of length 66  with 3 variables:
+\format{
+TREERING is a multivariate time series of length 66  with 3 variables:
 \describe{
 \item{THICK}{mean thickness of annual tree rings}                                 
 \item{TEMP}{mean temperature of the year}             
 \item{RAIN}{amount of rain of the year}
-}}
+}
+}
 \source{
 <https://ltrr.arizona.edu/>
 }

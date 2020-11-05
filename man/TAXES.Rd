@@ -4,12 +4,14 @@
 \name{TAXES}
 \alias{TAXES}
 \title{Monthly community taxes in Germany (billions EURO)}
-\format{TAXES is a univariate time series of length 246; start January 1999, frequency = 12
+\format{
+TAXES is a univariate time series of length 246; start January 1999, frequency = 12
 \describe{
 \item{TAXES}{monthly community taxes in Germany}
-}}
+}
+}
 \source{
-<https://www-genesis.destatis.de/genesis/online?operation=previous&levelindex=1&step=1&titel=Tabellenaufbau&levelid=1583748637039>
+<https://www-genesis.destatis.de/genesis/online?operation=previous&levelindex=1&step=1&titel= \cr Tabellenaufbau&levelid=1583748637039>
 }
 \usage{
 TAXES

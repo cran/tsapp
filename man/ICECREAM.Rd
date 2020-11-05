@@ -4,11 +4,13 @@
 \name{ICECREAM}
 \alias{ICECREAM}
 \title{Temperature and consumption of ice cream}
-\format{ICECREAM is a bivariate time series of length 160:  
+\format{
+ICECREAM is a bivariate time series of length 160:  
 \describe{ 
 \item{ICE}{consumption of ice cream} 
 \item{TEMP}{Temperature in Fahrenheit degrees}  
-}}
+}
+}
 \source{
 Hand, D. J., et al. (1994, ISBN: 9780412399206)  "A Handbook of Small Data Sets"
 }

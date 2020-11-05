@@ -4,11 +4,13 @@
 \name{LYNXHARE}
 \alias{LYNXHARE}
 \title{Size of populations of lynxes and snow hares}
-\format{LYNXHARE is a simulated bivariate  time series from a VAR[1]-model  of length 100:  
+\format{
+LYNXHARE is a simulated bivariate  time series from a VAR[1]-model  of length 100:  
 \describe{ 
 \item{X}{Number of lynxes} 
 \item{Y}{Number of snow hares}  
-}}
+}
+}
 \usage{
 LYNXHARE
 }

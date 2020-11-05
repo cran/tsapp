@@ -4,10 +4,12 @@
 \name{BLACKOUT}
 \alias{BLACKOUT}
 \title{Weekly number of births in New York}
-\format{BLACKOUT is a univariate time series of length 313, 1961 -- 1966
+\format{
+BLACKOUT is a univariate time series of length 313, 1961 -- 1966
 \describe{
 \item{BLACKOUT}{Weekly numbers of births  in New York}
-}}
+}
+}
 \source{
 Izenman, A. J., and Zabell, S. L. (1981)  <https://www.sciencedirect.com/science/article/abs/pii/
     0049089X81900181>

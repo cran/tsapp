@@ -4,11 +4,13 @@
 \name{LITH}
 \alias{LITH}
 \title{Daily subsoil water level and precipitation at pilot well Lith}
-\format{LITH is a bivariate time series of length 1347:
+\format{
+LITH is a bivariate time series of length 1347:
 \describe{
 \item{N}{precipitation amount}    
 \item{G}{water level} 
-}}
+}
+}
 \usage{
 LITH
 }

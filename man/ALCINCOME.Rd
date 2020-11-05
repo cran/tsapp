@@ -4,12 +4,14 @@
 \name{ALCINCOME}
 \alias{ALCINCOME}
 \title{Alcohol Demand, UK, 1870-1938.}
-\format{ALCINCOME is a threevariate time series of length 69 and 3 variables; start 1870, frequency = 1
+\format{
+ALCINCOME is a threevariate time series of length 69 and 3 variables; start 1870, frequency = 1
 \describe{ 
 \item{Y}{log consumption per head}
 \item{Z}{log real income per head} 
 \item{X}{log real price}
-}}
+}
+}
 \source{
 Durbin & Watson (1951)  <https://doi.org/10.1093/biomet/38.1-2.159>
 }

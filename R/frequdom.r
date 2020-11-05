@@ -47,7 +47,7 @@ return( cbind (f,spec) )
 #' @export 
  
 
-periodogram<-function(y,nf,ACF=FALSE,type="cov"){ 
+periodogram <- function(y,nf,ACF=FALSE,type="cov"){ 
    n <- length(y) 
 if (ACF==FALSE){  
    y1 <- y - mean(y)
@@ -111,7 +111,7 @@ return(w)
 #' @export 
   
 perwinba<-function(e,n){ 
-  if((e >= 0.5)|(e < 0)){ stop("e must be 0 <=e <0.5") }
+  if((e >= 0.5)|(e < 0)){ stop("e must be 0 <= e <0.5") }
   q <- 1 
   w <- 1 
   while ((1/(n*sum(w^2)) < e)&(q < n/2)){
@@ -145,11 +145,12 @@ return(w)
 #' @export  
 
 specest <- function(y,nf,e,win = c("perwinba","perwinpa"), conf=0,type="cov"){ 
-  y <-y-mean(y) 
+  y <- y-mean(y) 
   n <- length(y)  
   if(win[1]=="perwinpa"){  w <- perwinpa(e,n)  }
   else{ w <- perwinba(e,n)  }
-  m <- (length(w)-1)/2 
+  m <- (length(w)-1)/2  
+  if(nf + 1 - m <= 0){  stop("Length of periodogram window must not exceed nf. Increase nf or reduce e.") }
   if(type=="cov"){ fp <- periodogram(y,nf,type="cov") }
   if(type=="cor"){ fp <- periodogram(y,nf,type="cor") }
   p <- fp[,2] 
@@ -273,7 +274,7 @@ wntest <- function(e,a,k=0){
 #' data(WHORMONE)
 #' out <-taper(WHORMONE,0.3)
 #' \donttest{ 
-#' plot(WHORMON) 
+#' plot(WHORMONE) 
 #' lines(out,col="red") }
 #' @export 
  

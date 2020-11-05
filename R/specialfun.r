@@ -299,8 +299,7 @@ pestep <- function(f,xt){
          b <- c(b1,rep(0,m-p)) + c(rep(0,m-p),b2) 
         } 
 
-      ## possibly existing values ########################/
-       
+      ## possibly existing values ########################/ 
 
       if( length(indfehl) < m ){
          ind <- c(1:m)
@@ -468,3 +467,4 @@ RS <- function(x,k){
    }    
    return(R[-1,])
    }
+ 

@@ -4,10 +4,12 @@
 \name{TREMOR}
 \alias{TREMOR}
 \title{Measurements of physiological tremor}
-\format{TREMOR is a univariate time series of length 400.
+\format{
+TREMOR is a univariate time series of length 400.
 \describe{
 \item{TREMOR}{Tremor}
-}}
+}
+}
 \usage{
 TREMOR
 }

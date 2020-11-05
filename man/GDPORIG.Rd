@@ -4,12 +4,14 @@
 \name{GDPORIG}
 \alias{GDPORIG}
 \title{Germany's gross domestic product, values of Laspeyres index to base 2000}
-\format{GDPORIG is a univariate time series of length 159, start January 1970, frequency = 4
+\format{
+GDPORIG is a univariate time series of length 159, start January 1970, frequency = 4
 \describe{
 \item{GDPORIG}{gross domestic product, values of Laspeyres index to the base 2000}
-}}
+}
+}
 \source{
-<https://www-genesis.destatis.de/genesis//online?operation=table&code=81000-0002&levelindex=0&levelid=1583750132341>
+<https://www-genesis.destatis.de/genesis//online?operation=table&code=81000-0002&levelindex \cr =0&levelid=1583750132341>
 }
 \usage{
 GDPORIG

@@ -4,10 +4,12 @@
 \name{ENGINES}
 \alias{ENGINES}
 \title{Number of incoming orders for engines}
-\format{ENGINES is a univariate time series of length 188, start January 1972 frequency = 12
+\format{
+ENGINES is a univariate time series of length 188, start January 1972 frequency = 12
 \describe{
 \item{ENGINES}{Incoming orders for enginesn}
-}}
+}
+}
 \usage{
 ENGINES
 }

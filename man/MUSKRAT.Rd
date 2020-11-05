@@ -4,10 +4,12 @@
 \name{MUSKRAT}
 \alias{MUSKRAT}
 \title{Annual trade of muskrat pelts}
-\format{MUSKRAT is a univariate time series of length 62; start 1848, frequency = 1 
+\format{
+MUSKRAT is a univariate time series of length 62; start 1848, frequency = 1 
 \describe{
 \item{MUSKRAT}{annual trade of muskrat pelts}
-}}
+}
+}
 \source{
 <https://archive.uea.ac.uk/~gj/book/data/mink.dat>
 }

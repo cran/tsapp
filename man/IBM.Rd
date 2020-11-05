@@ -4,10 +4,12 @@
 \name{IBM}
 \alias{IBM}
 \title{IBM's stock price}
-\format{IBM is a univariate time series of length 369, start 17 May  1961
+\format{
+IBM is a univariate time series of length 369, start 17 May  1961
 \describe{
 \item{IBM}{IBM's daily stock price}
-}}
+}
+}
 \source{
 Box, G. E. P.  and Jenkins, G. M. (1970, ISBN: 978-0816210947)  "Time series analysis: forecasting and control"
 }

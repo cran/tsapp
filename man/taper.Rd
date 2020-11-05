@@ -21,6 +21,6 @@ tp   tapered time series
 data(WHORMONE)
 out <-taper(WHORMONE,0.3)
 \donttest{ 
-plot(WHORMON) 
+plot(WHORMONE) 
 lines(out,col="red") }
 }

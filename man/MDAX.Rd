@@ -4,13 +4,15 @@
 \name{MDAX}
 \alias{MDAX}
 \title{Stock market price of MDAX}
-\format{MDAX is a multivariate time series of length 6181 and 4 variables
+\format{
+MDAX is a multivariate time series of length 6181 and 4 variables
 \describe{
 \item{DAY}{Day of the week} 
 \item{MONTH}{Month} 
 \item{YEAR}{Year} 
 \item{MDAX}{Opening stock market price} 
-}}
+}
+}
 \source{
 <https://www.onvista.de/index/MDAX-Index-323547>
 }

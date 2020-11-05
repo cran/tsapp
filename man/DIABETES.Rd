@@ -4,13 +4,14 @@
 \name{DIABETES}
 \alias{DIABETES}
 \title{Incidences of insulin-dependent diabetes mellitus}
-\format{DIABETES is a univariate time series of length 72, start  January 1979, frequency = 12
+\format{
+DIABETES is a univariate time series of length 72, start  January 1979, frequency = 12
 \describe{
 \item{DIABETES}{Incidences of insulin-dependent diabetes mellitus}
-}}
+}
+}
 \source{
-Waldhoer, T., Schober, E. and Tuomilehto, J. (1997) <https://www.sciencedirect.com/science/
-   article/abs/pii/S0895435696003344>
+Waldhoer, T., Schober, E. and Tuomilehto, J. (1997) <https://www.sciencedirect.com/science/ \cr article/abs/pii/S0895435696003344>
 }
 \usage{
 DIABETES

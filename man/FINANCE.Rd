@@ -4,14 +4,16 @@
 \name{FINANCE}
 \alias{FINANCE}
 \title{Portfolio-Insurance-Strategies}
-\format{FINANCE is a multivariate time series of length 7529:
+\format{
+FINANCE is a multivariate time series of length 7529:
 \describe{
 \item{CPPI}{first Portfolio-Insurance-Strategy}
 \item{TIPP}{second Portfolio-Insurance-Strategy}
 \item{StopLoss}{third Portfolio-Insurance-Strategy}
 \item{SyntheticPut}{fourth Portfolio-Insurance-Strategy}
 \item{CASH}{money market investment}
-}}
+}
+}
 \source{
 Dichtl, H. and Drobetz, W. (2011) <doi:10.1016/j.jbankfin.2010.11.012>
 }

@@ -4,10 +4,12 @@
 \name{SCHAUINSLAND}
 \alias{SCHAUINSLAND}
 \title{CO2-Concentration obtained in Schauinsland, Germany}
-\format{SCHAUINSLAND is a univariate time series of length 72:
+\format{
+SCHAUINSLAND is a univariate time series of length 72:
 \describe{
 \item{SCHAUINSLAND}{CO2-Concentration obtained in Schauinsland}
-}}
+}
+}
 \source{
 <http://cdiac.ornl.gov/trends/co2/uba/uba-sc.html>
 }

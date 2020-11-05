@@ -4,10 +4,12 @@
 \name{WHORMONE}
 \alias{WHORMONE}
 \title{Concentration of growth hormone of a bull}
-\format{WHORMONE is a univariate time series of length 97:
+\format{
+WHORMONE is a univariate time series of length 97:
 \describe{
 \item{WHORMONE}{Concentration of growth hormone of a bull}
-}}
+}
+}
 \source{
 Newton, H. J. (1988, ISBN: 978-0534091989): "TIMESLAB: A time series analysis laboraty"
 }

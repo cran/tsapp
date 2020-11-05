@@ -4,10 +4,12 @@
 \name{SPRUCE}
 \alias{SPRUCE}
 \title{Annual logging of spruce wood.}
-\format{SPRUCE is a univariate time series of length 42: 
+\format{
+SPRUCE is a univariate time series of length 42: 
 \describe{
 \item{SPRUCE}{Annual logging of spruce wood}
-}}
+}
+}
 \usage{
 SPRUCE
 }

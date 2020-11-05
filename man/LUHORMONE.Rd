@@ -4,11 +4,13 @@
 \name{LUHORMONE}
 \alias{LUHORMONE}
 \title{Level of Luteinzing hormone of a cow}
-\format{LUHORMONE is a bivariate time series of length 29:
+\format{
+LUHORMONE is a bivariate time series of length 29:
 \describe{
 \item{T}{Time in minutes}
 \item{X}{Level of the Luteinzing-hormone}
-}}
+}
+}
 \usage{
 LUHORMONE
 }

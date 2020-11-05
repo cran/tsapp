@@ -7,7 +7,7 @@
 vartable(y, season)
 }
 \arguments{
-\item{y}{the series, a vector or a time series}
+\item{y}{the series, a vector or a time series  ( no NA's )}
 
 \item{season}{scalar, period of seasonal component}
 }

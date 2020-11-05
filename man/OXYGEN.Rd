@@ -4,11 +4,13 @@
 \name{OXYGEN}
 \alias{OXYGEN}
 \title{Amount of an Oxygen isotope}
-\format{OXYGEN is a  matrix with 164 rows and 2 columns   
+\format{
+OXYGEN is a  matrix with 164 rows and 2 columns   
 \describe{ 
 \item{T}{Time} 
 \item{D}{DELTA18O}  
-}}
+}
+}
 \source{
 Belecher, J., Hampton, J. S., and Tunnicliffe Wilson, T. (1994,  ISSN: 1369-7412)  "Parameterization of Continuous Time Autoregressive Models for Irregularly Sampled Time Series Data"
 }

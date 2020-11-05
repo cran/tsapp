@@ -4,10 +4,12 @@
 \name{PPDEMAND}
 \alias{PPDEMAND}
 \title{Peak power demand in Berlin}
-\format{PPDEMAND is a univariate time series of length 37; start 1955, frequency = 1
+\format{
+PPDEMAND is a univariate time series of length 37; start 1955, frequency = 1
 \describe{
 \item{PPDEMAND}{annual peak power demand in Berlin, Megawatt}
-}}
+}
+}
 \source{
 Fiedler, H. (1979)  "Verschiedene Verfahren zur Prognose des des Stromspitzenbedarfs in Berlin (West)"
 }

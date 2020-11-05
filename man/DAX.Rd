@@ -4,13 +4,15 @@
 \name{DAX}
 \alias{DAX}
 \title{Market value of DAX}
-\format{DAX is a multivariate time series of length 12180 and 4 variables
+\format{
+DAX is a multivariate time series of length 12180 and 4 variables
 \describe{
 \item{DAY}{Day of the week} 
 \item{MONTH}{Month} 
 \item{Year}{Year} 
 \item{DAX30}{Market value} 
-}}
+}
+}
 \usage{
 DAX
 }
