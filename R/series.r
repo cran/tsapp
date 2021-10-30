@@ -108,11 +108,11 @@
 "DOMINANCE"
 
                                                                                                                
-#' Number of incoming orders for engines   
+#' ENGINES is an alias for MACHINES   
 #'   
 #' @format ENGINES is a univariate time series of length 188, start January 1972 frequency = 12
 #' \describe{
-#' \item{ENGINES}{Incoming orders for enginesn}
+#' \item{ENGINES}{Incoming orders for engines}
 #' }   
 #' @examples 
 #' data(ENGINES)
@@ -287,6 +287,16 @@
 #' ## maybe  tsp(L921) ; plot(L921) 
 "L921"                     
 
+#' Number of incoming orders for machines   
+#'   
+#' @format MACHINES is a univariate time series of length 188, start January 1972 frequency = 12
+#' \describe{
+#' \item{MACHINES}{Incoming orders for machines}
+#' }   
+#' @examples 
+#' data(MACHINES)
+#' ## maybe  tsp(MACHINES) ; plot(MACHINES)  
+"MACHINES" 
 
 #' Atmospheric CO2 concentrations (ppmv) derived from in situ air samples collected at Mauna Loa Observatory, Hawaii   
 #'    

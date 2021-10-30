@@ -5,7 +5,14 @@
 \title{\code{specest}  direct spectral estimation of series y
                              using periodogram window win}
 \usage{
-specest(y, nf, e, win = c("perwinba", "perwinpa"), conf = 0, type = "cov")
+specest(
+  y,
+  nf,
+  e,
+  win = c("perwinba", "perwinpa", "perwinda"),
+  conf = 0,
+  type = "cov"
+)
 }
 \arguments{
 \item{y}{(n,1) vector, the ts}
@@ -15,7 +22,7 @@ specest(y, nf, e, win = c("perwinba", "perwinpa"), conf = 0, type = "cov")
 \item{e}{equal bandwidth, must be 0 <= e <0.5}
 
 \item{win}{string, name of periodogram window
-(possible: "perwinba", "perwinpa")}
+(possible: "perwinba", "perwinpa", "perwinda")}
 
 \item{conf}{scalar, the level for confidence intervals}
 
@@ -33,6 +40,6 @@ est  (nf+1,2)- or (nf+1,4)-matrix:
 }
 \examples{
 data(WHORMONE)
-est <- specest(WHORMONE,50,0.05,win = c("perwinba","perwinpa"),conf=0,type="cov") 
+est <- specest(WHORMONE,50,0.05,win = c("perwinba","perwinpa","perwinda"),conf=0,type="cov") 
 
 }

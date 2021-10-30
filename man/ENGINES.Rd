@@ -3,18 +3,18 @@
 \docType{data}
 \name{ENGINES}
 \alias{ENGINES}
-\title{Number of incoming orders for engines}
+\title{ENGINES is an alias for MACHINES}
 \format{
 ENGINES is a univariate time series of length 188, start January 1972 frequency = 12
 \describe{
-\item{ENGINES}{Incoming orders for enginesn}
+\item{ENGINES}{Incoming orders for engines}
 }
 }
 \usage{
 ENGINES
 }
 \description{
-Number of incoming orders for engines
+ENGINES is an alias for MACHINES
 }
 \examples{
 data(ENGINES)

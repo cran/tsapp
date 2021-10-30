@@ -2,10 +2,11 @@ exportPattern("^[[:alpha:]]+")
 importFrom("graphics", "abline", "lines", "par", "plot", "text",
                 "title","persp")
 importFrom("stats", "ARMAacf", "ARMAtoMA", "Box.test", "acf", "ar",
-                "arima", "ccf", "coef", "filter", "lm", "lm.fit", "mad",
+                "arima", "ccf", "coef", "cor", "filter", "lm", "lm.fit", "mad",
                 "median", "na.omit", "nlm", "pacf", "pchisq", "qchisq",
                 "qnorm", "resid", "residuals", "sd", "ts", "ts.plot", "tsp",
-                "var", "weighted.mean", "complete.cases", "toeplitz", "is.ts") 
+                "var", "weighted.mean", "complete.cases", "toeplitz", "is.ts", "quantile", "rnorm") 
 importFrom("vars", "VAR","VARselect")
 importFrom("Matrix", "bandSparse","crossprod","solve")
 importFrom("fftwtools", "fftw","mvfftw")
+importFrom("hdm", "rlasso", "lambdaCalculation", "LassoShooting.fit") 

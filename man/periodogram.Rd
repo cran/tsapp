@@ -9,7 +9,7 @@ periodogram(y, nf, ACF = FALSE, type = "cov")
 \arguments{
 \item{y}{(n,1) vector, the time series or  an  acf at lags 0,1,...,n-1}
 
-\item{nf}{scalar, the number of equally spaced frequencies}
+\item{nf}{scalar, the number of equally spaced frequencies; not necessay an integer}
 
 \item{ACF}{logical, FALSE, if y is ts, TRUE, if y is acf}
 
@@ -23,6 +23,6 @@ out  (floor(nf/2)+1,2) matrix, the frequencies and the periodogram
 }
 \examples{
 data(WHORMONE)
-out <-periodogram(WHORMONE,50,ACF=FALSE,type="cov")
-
+## periodogram at Fourier frequencies and frequencies 0 and 0.5 
+out <-periodogram(WHORMONE,length(WHORMONE)/2,ACF=FALSE,type="cov") 
 }

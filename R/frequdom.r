@@ -36,14 +36,14 @@ return( cbind (f,spec) )
 #'  
 #' @param  y   (n,1) vector, the time series or  an  acf at lags 0,1,...,n-1
 #' @param  ACF  logical, FALSE, if y is ts, TRUE, if y is acf
-#' @param  nf   scalar, the number of equally spaced frequencies
+#' @param  nf   scalar, the number of equally spaced frequencies; not necessay an integer
 #' @param  type  c("cov","cor"), area under spectrum, can be variance or normed to 1. 
 #' @return  out  (floor(nf/2)+1,2) matrix, the frequencies and the periodogram
 #'
 #' @examples 
 #' data(WHORMONE)
-#' out <-periodogram(WHORMONE,50,ACF=FALSE,type="cov")
-#'
+#' ## periodogram at Fourier frequencies and frequencies 0 and 0.5 
+#' out <-periodogram(WHORMONE,length(WHORMONE)/2,ACF=FALSE,type="cov") 
 #' @export 
  
 
@@ -123,6 +123,27 @@ perwinba<-function(e,n){
 return(w)
 } 
 
+
+#' \code{perwinda} Daniell  window for direct spectral estimation
+#'  
+#' @param  e   equal bandwidth  (at most n frequencies are used for averaging)
+#' @param  n   length of time series 
+#' @return  w   weights (symmetric)
+#'
+#' @examples 
+#' data(WHORMONE)
+#' w <- perwinda(0.1,length(WHORMONE)) 
+#'
+#' @export 
+  
+perwinda<-function(e,n){ 
+  if((e >= 0.5)|(e < 0)){ stop("e must be 0 <= e <0.5") }
+  q <- (e*n-1)/21 
+  w <- rep(1/(2*q+1), 2*q+1) 
+return(w)
+} 
+
+
 #' \code{specest}  direct spectral estimation of series y
 #'                              using periodogram window win
 #'  
@@ -130,7 +151,7 @@ return(w)
 #' @param  nf  number of equally spaced frequencies
 #' @param  e   equal bandwidth, must be 0 <= e <0.5
 #' @param  win string, name of periodogram window
-#'                             (possible: "perwinba", "perwinpa")
+#'                             (possible: "perwinba", "perwinpa", "perwinda")
 #' @param conf  scalar, the level for confidence intervals
 #' @param type  c("cov","cor"), area under spectrum is variance or is normed to 1.
 #'
@@ -140,15 +161,16 @@ return(w)
 #' \item{column 3+4:}{the confidence bounds   }
 #' @examples 
 #' data(WHORMONE)
-#' est <- specest(WHORMONE,50,0.05,win = c("perwinba","perwinpa"),conf=0,type="cov") 
+#' est <- specest(WHORMONE,50,0.05,win = c("perwinba","perwinpa","perwinda"),conf=0,type="cov") 
 #'
 #' @export  
 
-specest <- function(y,nf,e,win = c("perwinba","perwinpa"), conf=0,type="cov"){ 
+specest <- function(y,nf,e,win = c("perwinba","perwinpa","perwinda"), conf=0,type="cov"){ 
   y <- y-mean(y) 
   n <- length(y)  
-  if(win[1]=="perwinpa"){  w <- perwinpa(e,n)  }
-  else{ w <- perwinba(e,n)  }
+  if(win[1]=="perwinba"){  w <- perwinba(e,n)  }
+  else if (win[1]=="perwinpa"){  w <- perwinpa(e,n)  }
+  else { w <- perwinda(e,n)  }
   m <- (length(w)-1)/2  
   if(nf + 1 - m <= 0){  stop("Length of periodogram window must not exceed nf. Increase nf or reduce e.") }
   if(type=="cov"){ fp <- periodogram(y,nf,type="cov") }
@@ -374,6 +396,7 @@ dynspecest <- function( y,nseg,nf,e,theta = 0, phi = 15,d,Plot=FALSE ){
        }
       return(out)
       } 
+      
 #' \code{periodotest} computes the p-value of the test for a hidden periodicity
 #'
 #' @param y vector, the time series
@@ -389,7 +412,8 @@ dynspecest <- function( y,nseg,nf,e,theta = 0, phi = 15,d,Plot=FALSE ){
 periodotest <- function(y){
           n <- length(y)    
           if(n < 100){ warning("pvalue is appropriate only for n >= 100.") }
-          p <- periodogram(y - mean(y), trunc(n/2))  # periodogram at Fourier frequencies 
+          p <- periodogram(y - mean(y), n/2)  # periodogram at Fourier frequencies 
+          p <- p[(p[,1]>0)&(p[,1]<0.5),]      # frequency 0 and 0.5 must be eleminated
           m <- mean(p[,2])   
           pval <- 1-(1-exp(-max(p[,2])/m))^trunc((n-1)/2)
           return(pval)
